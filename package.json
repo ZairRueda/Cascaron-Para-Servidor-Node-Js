@@ -4,7 +4,7 @@
   "description": "* En este proyecto analizaremos a profundidad el rest server \r * Crear estructuras que pocibiliten el crecimineto del producto",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app"
   },
   "keywords": [],
   "author": "",
