@@ -19,7 +19,13 @@ class Server{
 
     middlewares() {
         // Identifiacamos los middlewares por el .use
+        
+        // CORS
         this.app.use(cors())
+
+        // Cuando queramos traer algo por Post en formato Json
+        // Parsaeo y Lectura del body > express.json() > parseara todo lo que este trabajando
+        this.app.use(express.json())
 
         // Directorio plublico
         // .use > asi identificamos que estamos usando un middelware

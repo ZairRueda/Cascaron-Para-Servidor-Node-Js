@@ -1,48 +1,25 @@
 const { Router } = require('express')
+const { 
+    usuariosGet, 
+    usuariosPut, 
+    usuariosPost,
+    usuariosDelete,
+    usuariosPatch
+} = require('../controllers/user.controller')
 
 const router = Router()
 
 // Este codigo no es escalable, esta todo junto
-router.get('/', (req, res) => {
-    // res.send('Hello World')
+router.get('/', usuariosGet)
 
-    res.json({
-        // El OK no es necesario realmente, solo es un codigo de verificacion
-        msg: 'get API'
-    })
+// Si queremos pasarle un argumento al path se agrega despues de :
+router.put('/:id', usuariosPut)
 
-    // Uno puede enviar diferentes tipos de formatos 
-    /* Ejem: .json > en este caso podemos enviar un objeto */
-})
+router.post('/', usuariosPost)
 
-router.put('/', (req, res) => {
-    res.status(404).json({
-        msg: 'put API'
-    })
-})
+router.delete('/', usuariosDelete)
 
-router.post('/', (req, res) => {
-    // res.json({
-    //     msg: 'post API'
-    // })
-
-    // Mandar con el estatuas
-    res.status(201).json({
-        msg: 'post API'
-    })
-})
-
-router.delete('/', (req, res) => {
-    res.json({
-        msg: 'delete API'
-    })
-})
-
-router.patch('/', (req, res) => {
-    res.json({
-        msg: 'patch API'
-    })
-})
+router.patch('/', usuariosPatch)
 
 
 module.exports = router
