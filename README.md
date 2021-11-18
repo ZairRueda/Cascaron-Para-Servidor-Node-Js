@@ -27,3 +27,5 @@
     * Las rutas de la aplicacion
 3. controllers 
     * Los controladores de las rutas
+4. Modules 
+    * Los modulos para cada ruta
