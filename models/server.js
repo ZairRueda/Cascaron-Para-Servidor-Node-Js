@@ -11,7 +11,7 @@ class Server{
         // Para saber que rutas contiene el servidor
         this.usuariosPath = '/api/usuarios'
 
-        // Añadimos Middlewares : Funciones con las que a;adimos otras funcionalidades a nuestro server
+        // Añadimos Middlewares : Funciones con las que añadimos otras funcionalidades a nuestro server
         this.middlewares()
         // Rutas de mi aplicacion
         this.routes()
